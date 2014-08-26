@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{amssymb, amsmath}
+\usepackage[frenchb]{babel}
+
+
+
+\usepackage[pdftex=true,
+hyperindex=true,
+colorlinks=true]{hyperref}
+
+
+
+\newsavebox{\boiteremarque}
+\newenvironment{remarque}{%
+% clause begin
+\begin{lrbox}{\boiteremarque}% début mise en boîte
+\begin{minipage}{.8\textwidth}}{%
+% clause end
+\end{minipage}
+\end{lrbox}% fin mise en boîte
+% production de la boîte encadrée
+\begin{center}
+\fbox{\usebox{\boiteremarque}}
+\end{center}}
+
+
+
+
+\title{Génératrice portable \\ Construction d'une alimentation \\ stabilisée en tension portable}
+\author{Jérôme GRARD}
+\addtolength{\textwidth}{1cm}
+\addtolength{\oddsidemargin}{-0,5cm}
+
+
+\begin{document}
+
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{remarque}
+	Ce document a pour but de présenter les travaux de recherche permettant de construire une
+	alimentation stabilisée en tension portable. Cette alimentation a pour contraintes d'utiliser
+	des pièces récupérées en priorité ---pour alléger les coûts--- et de fonctionner avec des
+	piles AA (LR6) de sorte à pouvoir les remplacer facilement et à moindre coût.\newline
+	\begin{center}
+		Ce document a été édité en \LaTeX --- Diffusons le logiciel libre ! \newline
+		Mes autres projets sur http://the-destiny.no-ip.org
+	\end{center}
+\end{remarque}
+
+\newpage
+
+
+
+\pagestyle{plain}
+\setcounter{page}{1}
+\tableofcontents
+
+
+\newpage
+
+
+\end{document}

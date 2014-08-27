@@ -150,7 +150,7 @@ donne donc les résultats suivant :
 \end{align}
 
 
-\subsection{Calibration à 5V}
+\subsection{Calibration à 5V}\label{calcul5V}
 
 On veut aussi avoir un mode calibré directement à 5V, sans avoir à faire de réglage. Un interrupteur permettra de
 commuter les deux modes. Dans l'un  $R_2$ sera branchée, dans l'autre ce sera $R_{2bis}$ qui la remplacera. Nous
@@ -196,5 +196,59 @@ On prendra arbitrairement $R_4$ = 1 $k\Omega$ pour se simplifier les calculs, et
 On utilisera donc un CMS de 120 $k\Omega$ Phycomp à 5\% et une traversante d'un kilo Ohm.
 
 
+
+
+
+\newpage
+\section{Interrupteur}
+
+Cette section détaille le câblage des interrupteurs disponibles en façade, et leur fonctionalités.
+
+\subsection{Liste}
+
+Liste des interruteurs :\newline
+
+
+\begin{tabular}{|c|c|c|}
+	\hline
+	Nom	& Type			& Fonction \\ \hline
+	ON/OFF	& Radio, deux positions	& Coupe circuit général \\
+	SW1	& Radio, deux positions & Active la sortie USB et BNC \\
+	SW2	& Radio, deux positions & Switch entre tension libre et stabilisée à 5V \\
+	\hline
+\end{tabular}
+
+\subsection{ON/OFF}
+
+L'interrupteur ON/OFF doit servir de coupe-circuit général, nous faison le choix de ne pas nous servir de la broche
+ON/OFF disponible sur le LM pour avoir un arrêt intégral de tout le circuit d'un façon plus simplifiée : commuter
+l'alimentation. L'intérrupteur a donc été placé entre les deux blocs de batteries.
+
+\subsection{SW1}
+
+Cet interrupteur permet de commuter la sortie sur l'USB et le BNC ou sur une résistance de charge intégrée au dispositif
+et notée $R_0$ sur le schéma \ref{SchemaAjout}. Cette résistance de charge sert notamment à permettre au LM de ne pas avoir
+une sortie libre lors du réglage de la tension de sortie (si SW2 est en mode de tension libre par exemple). Nous avons 
+choisi de mettre une résistance de $\approx 21\ k\Omega$ de sorte à avoir une intensité de sortie pas trop forte\footnote{
+Le but n'est pas non plus de faire sortir une grande intensitée, cela épuiserai les batteries inutilement}. Pour
+cela nous utiliserons une traversante mise dans une gaine thermorétractable, la traversante sera directement soudée 
+sur l'interrupteur.
+
+\subsection{SW2}
+
+Cet interrupteur permet de commuter entre les modes :
+
+\begin{itemize}
+	\item Tension tabilisée à 5V
+	\item Tension réglable $\in [1.24 ; 10.71]$\\
+\end{itemize}
+
+Dans le premier cas, nous serons sur deux CMS mis en série de 6.2 $k\Omega$ 1\% de Panasonic, chacun dont 
+le détail du calcul est fourni en \ref{calcul5V}. Les CMS seront mis sur une plaque en bakélite perforée mise dans
+une gaine thermorétractable.\newline
+
+Dans le second cas , nous sortons sur la résistance variable $R_2$.
+
+\subsection{Plan de câblage}
 
 \end{document}

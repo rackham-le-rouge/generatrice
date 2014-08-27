@@ -71,10 +71,23 @@ colorlinks=true]{hyperref}
 
 \section{Schéma électronique}
 
+Schéma général extrait de la datasheet, présente l'environnement de l'alimentation à découpage :\newline
+
 \begin{figure}[!h]
         \centering
         \includegraphics[scale=0.5]{Schema}
-        \caption{Schema électronique}\label{Schema}
+        \caption{Schema électronique général}\label{Schema}
+\end{figure}
+
+
+Le schéma suivant présente les ajouts fait en sortie du montage de sorte à bénéficier de toutes les fonctions
+demandées dans le cahier des charges. Les noms des résistances utilisées ici resterons valable durant toute
+la documentation ; leur valeurs seront calculés dans la partie \ref{sectionCalculs}.
+
+\begin{figure}[!h]
+        \centering
+        \includegraphics[scale=0.6]{generatrice}
+        \caption{Schema électronique des ajouts}\label{SchemaAjout}
 \end{figure}
 
 
@@ -103,7 +116,7 @@ passif. C'est de plus le plus facile à trouver dans le commerce.
 
 
 \newpage
-\section{Calculs}
+\section{Calculs}\label{sectionCalculs}
 
 Section détaillant tous les calculs des résistances nécessaire au paramétrage du module. Toutes les valeurs ici présentées
 font référence au schéma \ref{Schema}.
